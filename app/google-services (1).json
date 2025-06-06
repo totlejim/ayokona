@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "204272631063",
+    "project_id": "ayokona-ce1a4",
+    "storage_bucket": "ayokona-ce1a4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204272631063:android:734d1033554d537ca40b52",
+        "android_client_info": {
+          "package_name": "com.example.notegonnalie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTZ_JqANTTCfnFhGUQoGBM3v7QGhARd6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NoteGonnaLie" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+    <!-- background Dark Mode -->
+    <style name="BACKGROUND">
+        <item name="background">@drawable/background_gradient</item>
+    </style>
+
+    <!-- Text Dark Mode -->
+    <style name="TEXT">
+        <item name="android:textColor">#B24048</item>
+    </style>
+
+    <!-- Button Dark Mode -->
+    <style name="BUTTON">
+        <item name="android:textColor">#B24048</item>
+        <item name="android:background">#CFF4AFDD</item>
+    </style>
+
+    <!-- EditText Dark Mode -->
+    <style name="EDITTEXT">
+        <item name="android:textColor">#C7C7C7</item>
+        <item name="android:background">#47174E</item>
+    </style>
+
+</resources>

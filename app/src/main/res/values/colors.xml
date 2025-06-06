@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="blacktext">#313131</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#9B9B9B</color>
+    <color name="peach">#F5C8CB</color>
+    <color name="lightpink">#FADADD</color>
+    <color name="lightpurple">#D1B4E4</color>
+    <color name="darkpurple">#760465</color>
+    <color name="darkerpurple">#270237</color>
+    <color name="textl">#792C43</color>
+    <color name="textd">#B24048</color>
+    <color name="purple">#8C00FF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="whitepink">#FFE3F3</color>
+</resources>

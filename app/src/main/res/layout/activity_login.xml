@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/peach">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/toolbar_menu3"
+        app:titleTextColor="@color/textl">
+
+        <ImageView
+            android:id="@+id/backButtonToolBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/outline_arrow_circle_left__black24" />
+
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/logo_lightmode"
+            android:layout_marginTop="60dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Welcome Back!"
+            android:textSize="27sp"
+            android:textColor="@color/textl"
+            android:textAlignment="center"
+            android:fontFamily="@font/inknutantiqua_bold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log in to your NoteGonnaLie \n account now."
+            android:textSize="15sp"
+            android:textColor="@color/textl"
+            android:textAlignment="center"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="15sp"
+            android:textColor="@color/textl"
+            android:fontFamily="@font/inknutantiqua_bold"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/custom_edittext"
+            android:hint="enter your name here..."
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/cardview_dark_background" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="15sp"
+            android:textColor="@color/textl"
+            android:fontFamily="@font/inknutantiqua_bold"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/custom_edittext"
+            android:hint="enter an 8-digit password here..."
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/cardview_dark_background" />
+
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkboxRememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Remember me"
+        android:textSize="16sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintStart_toStartOf="@id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2"
+        />
+
+
+    <TextView
+        android:id="@+id/forgotpassTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/checkboxRememberMe"
+        app:layout_constraintEnd_toEndOf="@id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@id/checkboxRememberMe"
+        android:layout_marginRight="30dp"
+        />
+
+    <View
+        android:id="@+id/forgotpasswordView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="@id/forgotpassTextView"
+        app:layout_constraintStart_toStartOf="@id/forgotpassTextView"
+        app:layout_constraintTop_toBottomOf="@id/forgotpassTextView"
+        />
+
+    <Button
+        android:id="@+id/continueButton1"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/welcomebutton_background"
+        android:padding="8dp"
+        android:text="Continue"
+        android:textColor="@color/textl"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxRememberMe"
+        android:layout_marginTop="70dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/continueButton1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/subtof_ppText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="By clicking continue, you agree to our"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tof_ppText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Terms of Service and Privacy Policy"
+            android:textAlignment="center"
+            android:textColor="@color/textl"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>

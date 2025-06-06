@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerificationActivity"
+    android:orientation="vertical"
+    android:background="@color/peach">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:paddingTop="20dp"
+        >
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo_lightmode"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="NoteGonnaLie"
+            android:textSize="20sp"
+            android:textColor="@color/textl"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="@font/inknutantiqua_bold"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Verification"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="@color/textl"
+            android:fontFamily="@font/inknutantiqua_bold"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="80dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We sent a code to your Email. Kindly enter \n8-digit code to verify."
+            android:textSize="14sp"
+            android:textColor="@color/textl"
+            android:textAlignment="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verification Code"
+            android:textSize="15sp"
+            android:textColor="@color/textl"
+            android:fontFamily="@font/inknutantiqua_bold"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+
+        <EditText
+            android:id="@+id/verificationcodeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/custom_edittext"
+            android:hint="enter the 8-digit code here..."
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/cardview_dark_background" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/continueButton3"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="@drawable/welcomebutton_background"
+        android:padding="8dp"
+        android:text="Continue"
+        android:textColor="@color/textl"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/backButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/continueButton3"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="150dp"
+        android:drawableLeft="@drawable/baseline_chevron_left_24"
+        android:background="@color/transparent"
+        android:text="Back"
+        android:textSize="14sp"
+        android:textColor="@color/textl"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
