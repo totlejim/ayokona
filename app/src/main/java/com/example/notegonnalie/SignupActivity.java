@@ -2,7 +2,6 @@ package com.example.notegonnalie;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -18,26 +17,30 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.FirebaseApp;
 
 public class SignupActivity extends AppCompatActivity {
 
-    Button continueButton2;
-    ImageView backButtonToolBar;
-    TextView tof_ppText;
-
-    EditText usernameEditText, emailEditText, passwordEditText;
-
+    private Button continueButton2;
+    private ImageView backButtonToolBar;
+    private TextView tof_ppText;
+    private EditText usernameEditText, emailEditText, passwordEditText;
     private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        FirebaseApp.initializeApp(this); // Initialize Firebase BEFORE using FirebaseAuth
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_signup);
+        firebaseAuth = FirebaseAuth.getInstance();
+
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -45,8 +48,7 @@ public class SignupActivity extends AppCompatActivity {
             return insets;
         });
 
-        firebaseAuth = FirebaseAuth.getInstance();
-        FirebaseApp.initializeApp(this);
+
 
         // UI references
         usernameEditText = findViewById(R.id.username);
@@ -71,52 +73,45 @@ public class SignupActivity extends AppCompatActivity {
             String email = emailEditText.getText().toString().trim();
             String password = passwordEditText.getText().toString().trim();
 
-            if (TextUtils.isEmpty(username)) {
-                usernameEditText.setError("Username is required");
-                return;
-            }
-// Inside continueButton2.setOnClickListener
-            if (TextUtils.isEmpty(email)) {
-                emailEditText.setError("Email is required");
-                return;
-            } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                emailEditText.setError("Please enter a valid email address");
+            if (username.isEmpty() || email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(SignupActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            continueButton2.setEnabled( false );
-            Toast.makeText(SignupActivity.this, "All fields are filled", Toast.LENGTH_SHORT).show();
+            if (password.length() < 8) {
+                Toast.makeText(SignupActivity.this, "Password must be at least 8 characters", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
-            firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    continueButton2.setEnabled( true );
-                    if (task.isSuccessful()) {
-                        Toast.makeText( SignupActivity.this, "Registration Successful", Toast.LENGTH_SHORT ).show();
-                        sendEmailVerification();
-                    } else {
-                        Toast.makeText( SignupActivity.this, "Registration Failed", Toast.LENGTH_SHORT ).show();
-                    }
-                }
-            });
+            continueButton2.setEnabled(false); // Prevent double-tap
+
+            firebaseAuth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(SignupActivity.this, task -> {
+                        continueButton2.setEnabled(true);
+                        if (task.isSuccessful()) {
+                            Toast.makeText(SignupActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                            sendEmailVerification();
+                        } else {
+                            Toast.makeText(SignupActivity.this, "Registration Failed: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                        }
+                    });
         });
     }
-
 
     private void sendEmailVerification() {
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         if (firebaseUser != null) {
-            firebaseUser.sendEmailVerification().addOnCompleteListener( new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    Toast.makeText(SignupActivity.this, "Verification Email Has Been Sent", Toast.LENGTH_SHORT).show();
-                    firebaseAuth.signOut();
-                    finish();
-                    startActivity(new Intent(SignupActivity.this, LoginActivity.class));
-                }
-            });
-        } else {
-            Toast.makeText(SignupActivity.this, "Failed to send verification email", Toast.LENGTH_SHORT).show();
+            firebaseUser.sendEmailVerification()
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(SignupActivity.this, "Verification email sent", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(SignupActivity.this, "Failed to send verification email", Toast.LENGTH_SHORT).show();
+                        }
+                        firebaseAuth.signOut();
+                        startActivity(new Intent(SignupActivity.this, LoginActivity.class));
+                        finish();
+                    });
         }
     }
 }

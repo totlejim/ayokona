@@ -17,4 +17,8 @@
         android:id="@+id/searchItem"
         />
 
+    <item
+        android:title="Sign out"
+        android:id="@+id/signOut"/>
+
 </menu>

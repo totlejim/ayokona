@@ -36,6 +36,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.sql.Timestamp;
 import java.util.Stack;
 
 public class newnotesActivity extends AppCompatActivity {
@@ -50,11 +51,15 @@ public class newnotesActivity extends AppCompatActivity {
 
 
 
+
     private Stack<String> undoStack = new Stack<>();
     private Stack<String> redoStack = new Stack<>();
     private String lastText = "";
 
     private boolean isProgrammaticChange = false;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +97,7 @@ public class newnotesActivity extends AppCompatActivity {
         boldformatbutton = findViewById( R.id.boldformatButton );
         italicformatButton = findViewById( R.id.italicformatButton );
         underlineformatButton = findViewById( R.id.underlineformatButton );
+        saveButton = findViewById( R.id.saveButton );
 
 
         boldformatbutton.setOnClickListener( new View.OnClickListener() {
@@ -177,6 +183,8 @@ public class newnotesActivity extends AppCompatActivity {
                 builder.show();
             }
         } );
+
+
 
     }
 

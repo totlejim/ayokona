@@ -78,12 +78,10 @@
         android:hint="Title of your note..."
         android:inputType="textMultiLine"
         android:textColor="@color/textl"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
 
         app:layout_constraintTop_toBottomOf="@id/formatToolbar"
 
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="8dp" />
 
     <EditText
         android:id="@+id/notecontentEditText"
@@ -206,6 +204,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.959" />
+
+
 
 
 

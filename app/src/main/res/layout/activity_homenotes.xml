@@ -14,6 +14,7 @@
         android:layout_height="?actionBarSize"
         android:background="@drawable/toolbar_background"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/toolbar_menu"
@@ -32,11 +33,10 @@
             android:layout_marginStart="16dp"
             android:layout_toEndOf="@+id/logoToolBar"
             android:fontFamily="@font/inknutantiqua_bold"
+            android:paddingStart="10dp"
             android:text="@string/app_name"
             android:textColor="@color/textl"
-            android:textSize="20sp"
-            android:paddingStart="10dp"
-            />
+            android:textSize="20sp" />
 
 
     </com.google.android.material.appbar.MaterialToolbar>
@@ -299,7 +299,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:id="@+id/linearLayout10">
 
         <RelativeLayout
             android:layout_width="wrap_content"

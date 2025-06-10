@@ -28,9 +28,7 @@
             android:exported="false" />
         <activity
             android:name=".newnotesActivity"
-            android:exported="false" >
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".HomenotesActivity"
             android:exported="false" />

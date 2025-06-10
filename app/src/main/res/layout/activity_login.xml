@@ -24,9 +24,6 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:src="@drawable/outline_arrow_circle_left__black24" />
-
-
-
     </com.google.android.material.appbar.MaterialToolbar>
 
     <LinearLayout
@@ -39,8 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:src="@drawable/logo_lightmode"
-            android:layout_marginTop="60dp"
-            />
+            android:layout_marginTop="60dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -49,8 +45,7 @@
             android:textSize="27sp"
             android:textColor="@color/textl"
             android:textAlignment="center"
-            android:fontFamily="@font/inknutantiqua_bold"
-            />
+            android:fontFamily="@font/inknutantiqua_bold" />
 
         <TextView
             android:layout_width="match_parent"
@@ -58,9 +53,7 @@
             android:text="Log in to your NoteGonnaLie \n account now."
             android:textSize="15sp"
             android:textColor="@color/textl"
-            android:textAlignment="center"
-            />
-
+            android:textAlignment="center" />
     </LinearLayout>
 
     <LinearLayout
@@ -70,26 +63,24 @@
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Username"
+            android:text="Email"
             android:textSize="15sp"
             android:textColor="@color/textl"
             android:fontFamily="@font/inknutantiqua_bold"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            />
+            android:layout_marginRight="30dp" />
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/Email"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/custom_edittext"
-            android:hint="enter your name here..."
+            android:hint="enter your email here..."
             android:padding="8dp"
             android:textColor="@color/black"
             android:textColorHighlight="@color/cardview_dark_background" />
@@ -102,23 +93,38 @@
             android:textColor="@color/textl"
             android:fontFamily="@font/inknutantiqua_bold"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            />
+            android:layout_marginRight="30dp" />
 
-        <EditText
-            android:id="@+id/password"
+        <!-- Combined EditText and eye icon in one row -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
+            android:orientation="horizontal"
             android:background="@drawable/custom_edittext"
-            android:hint="enter an 8-digit password here..."
-            android:inputType="textPassword"
-            android:padding="8dp"
-            android:textColor="@color/black"
-            android:textColorHighlight="@color/cardview_dark_background" />
+            android:gravity="center_vertical">
 
+            <EditText
+                android:id="@+id/Password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="enter an 8-digit password here..."
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:background="@android:color/transparent" />
 
+            <ImageView
+                android:id="@+id/togglePasswordVisibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/baseline_remove_red_eye_24"
+                android:contentDescription="Toggle password visibility" />
+        </LinearLayout>
     </LinearLayout>
 
     <CheckBox
@@ -131,9 +137,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         app:layout_constraintStart_toStartOf="@id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout2"
-        />
-
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2" />
 
     <TextView
         android:id="@+id/forgotpassTextView"
@@ -155,8 +159,7 @@
         android:background="@color/grey"
         app:layout_constraintEnd_toEndOf="@id/forgotpassTextView"
         app:layout_constraintStart_toStartOf="@id/forgotpassTextView"
-        app:layout_constraintTop_toBottomOf="@id/forgotpassTextView"
-        />
+        app:layout_constraintTop_toBottomOf="@id/forgotpassTextView" />
 
     <Button
         android:id="@+id/continueButton1"
@@ -172,8 +175,7 @@
         android:textColor="@color/textl"
         android:textAlignment="center"
         app:layout_constraintTop_toBottomOf="@+id/checkboxRememberMe"
-        android:layout_marginTop="70dp"
-        />
+        android:layout_marginTop="70dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -200,9 +202,6 @@
             android:textAlignment="center"
             android:textColor="@color/textl"
             android:textSize="14sp" />
-
     </LinearLayout>
-
-    
 
 </androidx.constraintlayout.widget.ConstraintLayout>
