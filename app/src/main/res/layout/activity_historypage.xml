@@ -32,7 +32,7 @@
             android:layout_marginStart="16dp"
             android:layout_toEndOf="@+id/logoToolBar"
             android:fontFamily="@font/inknutantiqua_bold"
-            android:text="@string/app_name"
+            android:text="@string/app_name2"
             android:textColor="@color/textl"
             android:textSize="20sp"
             android:paddingStart="10dp"

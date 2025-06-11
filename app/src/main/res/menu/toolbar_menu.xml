@@ -1,24 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:title="Note History"
-        android:id="@+id/notehistoryItem"
-        />
-    <item
-        android:title="Create Folder"
-        android:id="@+id/createfolderItem"
-        />
-    <item
-        android:title="Select"
-        android:id="@+id/selectItem"
-        />
-    <item
-        android:title="Search"
-        android:id="@+id/searchItem"
-        />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:title="Sign out"
-        android:id="@+id/signOut"/>
+        android:id="@+id/notehistoryItem"
+        android:title="History"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/selectItem"
+        android:title="Select"
+        android:icon="@android:drawable/ic_menu_agenda"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/searchItem"
+        android:title="Search"
+        android:icon="@android:drawable/ic_menu_search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always|collapseActionView" />
+
+    <item
+        android:id="@+id/signOut"
+        android:title="Sign Out"
+        android:icon="@android:drawable/ic_lock_power_off"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/Pin"
+        android:title="Pin"
+        app:showAsAction="never" />
 
 </menu>
