@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/folderNotesMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/peach">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/baseline_chevron_left_24"
+        android:contentDescription="Back"
+       />
+
+    <!-- Folder Title -->
+    <TextView
+        android:id="@+id/folderTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Folder Title"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/textl"
+        android:paddingBottom="10dp"
+        android:paddingTop="8dp" />
+
+    <!-- Scrollable Notes Grid -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <GridLayout
+            android:id="@+id/folderNotesGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="16dp"
+            android:orientation="horizontal" />
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/Addstuff"
+        android:layout_width="74dp"
+        android:layout_height="35dp"
+        android:layout_gravity="end"
+        android:background="@drawable/custom_button1_background"
+        android:src="@drawable/outline_add_2_24" />
+</LinearLayout>

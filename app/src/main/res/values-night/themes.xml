@@ -7,7 +7,7 @@
 
     <!-- background Dark Mode -->
     <style name="BACKGROUND">
-        <item name="background">@drawable/background_gradient</item>
+        <item name="background">@color/peach</item>
     </style>
 
     <!-- Text Dark Mode -->

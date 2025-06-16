@@ -40,115 +40,6 @@
 
     </com.google.android.material.appbar.MaterialToolbar>
 
-    <TextView
-        android:id="@+id/recentaddednotesTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Recently Added"
-        android:fontFamily="@font/inknutantiqua_bold"
-        android:textColor="@color/textl"
-        android:layout_marginStart="20dp"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        android:layout_marginTop="10dp"
-        />
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/recentaddednotesTextView"
-        android:orientation="vertical"
-        android:layout_marginLeft="10dp">
-
-        <LinearLayout
-            android:id="@+id/noterecentIcon1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            >
-
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:src="@drawable/post_it"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Note 1"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="25dp"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/noterecentIcon2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            >
-
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:src="@drawable/post_it"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Note 2"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="25dp"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/noterecentIcon3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            >
-
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:src="@drawable/post_it"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Note 3"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="25dp"
-                />
-
-        </LinearLayout>
-
-    </LinearLayout>
 
     <TextView
         android:id="@+id/recentdeletednotesTextView"
@@ -158,8 +49,8 @@
         android:fontFamily="@font/inknutantiqua_bold"
         android:textColor="@color/textl"
         android:layout_marginStart="20dp"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout8"
         android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         />
 
 
@@ -167,36 +58,34 @@
         android:id="@+id/linearLayout9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/recentdeletednotesTextView"
         android:orientation="vertical"
-        android:layout_marginLeft="10dp">
+        app:layout_constraintTop_toBottomOf="@id/recentdeletednotesTextView"
+        tools:layout_editor_absoluteX="10dp">
 
         <LinearLayout
             android:id="@+id/noterecentIcon4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal"
             android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="5dp"
-            >
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/post_it"/>
+                android:src="@drawable/post_it" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Note 4"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textSize="20sp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="25dp"
-                />
+                android:text="Note 4"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -205,27 +94,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal"
             android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="5dp"
-            >
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/post_it"/>
+                android:src="@drawable/post_it" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Note 5"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textSize="20sp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="25dp"
-                />
+                android:text="Note 5"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -234,32 +121,45 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal"
             android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="5dp"
-            >
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/post_it"/>
+                android:src="@drawable/post_it" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Note 6"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textSize="20sp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="25dp"
-                />
+                android:text="Note 6"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/historyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/deleteActionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:paddingEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/recentdeletednotesTextView">
 
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

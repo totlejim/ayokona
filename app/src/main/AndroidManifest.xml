@@ -17,6 +17,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+        <activity android:name=".ViewNoteActivity"
+            android:exported="false"/>
         <activity
             android:name=".TOF_PPActivity"
             android:exported="false" />
@@ -50,6 +52,8 @@
         <activity
             android:name=".WelcomeActivity"
             android:exported="false" />
+        <activity android:name=".FolderNotesActivity"
+            android:exported="false"/>
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">

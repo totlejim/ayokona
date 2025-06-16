@@ -10,7 +10,7 @@
 
     <!-- background Light Mode -->
     <style name="BACKGROUND">
-        <item name="background">@drawable/background_gradient</item>
+        <item name="background">@color/darkpurple</item>
     </style>
 
     <!-- Text Light Mode -->

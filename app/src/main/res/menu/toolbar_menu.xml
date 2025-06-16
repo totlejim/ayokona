@@ -28,8 +28,18 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/Pin"
-        android:title="Pin"
+        android:id="@+id/Permanentlydelete"
+        android:title="Permanently Delete"
+        android:icon="@android:drawable/ic_delete"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/Recover"
+        android:title="Recover"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        app:showAsAction="never" />
+
+
+
 
 </menu>
